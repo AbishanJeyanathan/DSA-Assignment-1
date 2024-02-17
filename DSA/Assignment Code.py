@@ -13,6 +13,8 @@ def main():
 products = main()
 for product in products:
     print("Product ID:" product.product_id)
-    
+    print("Name:", product.name)
+    print("Price:", product.price)
+    print("Category:" product.category)
     
 
