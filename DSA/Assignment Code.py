@@ -23,6 +23,14 @@ def main():
         print("Price:", item.price)
         print("Category:", item.category)
 
+def bubble_sort(items):
+    n = len(items)
+    for c in range(n):
+        for a in range(0, n-i-1):
+            if items[a].price > items[a+1].price:
+                items[a], items[a+1], items[a]
+    return items     
+
 if __name__ == "__main__":
     main()
 
