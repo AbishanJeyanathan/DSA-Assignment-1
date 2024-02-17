@@ -5,6 +5,13 @@ class Product:
         self.price = price
         self.category = category
 
+def load_product_data(file_path):
+    product = []
+    for line in file:
+        product = Product(product_id, name, price, category)
+        product.append(product)
+    return products    
+
 def main():
     files = "product_data.txt"
     with open(files, 'r') as file:
