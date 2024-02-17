@@ -5,7 +5,14 @@ class Product:
         self.price = price
         self.category = category
 
-def load_product_data(file_path):
-    products = []
- 
+def main():
+    files = "product_data.txt"
+    with open(files, 'r') as file:
+        return [Product(*line.strip().split.(', ')) for line in file]
+
+products = main()
+for product in products:
+    print("Product ID:" product.product_id)
+    
+    
 
