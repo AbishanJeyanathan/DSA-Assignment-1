@@ -16,10 +16,7 @@ def load_item_data(file_path):
 
 def show_items(items):
     for item in items:
-        print("Item ID:", item.item_id)
-        print("Name:", item.name)
-        print("Price:", item.price)
-        print("Category:", item.category)
+        print("Item ID:", item.item_id, "Name:", item.name, "Price:", item.price, "Category:", item.category)
         
 def bubble_sort(items):
     n = len(items)
