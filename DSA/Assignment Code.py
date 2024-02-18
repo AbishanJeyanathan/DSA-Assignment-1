@@ -14,22 +14,25 @@ def load_item_data(file_path):
             items.append(item)
     return items    
 
-def main():
-    file = "product_data.txt"
-    items = load_item_data(file)
+def show_items(items):
     for item in items:
         print("Item ID:", item.item_id)
         print("Name:", item.name)
         print("Price:", item.price)
         print("Category:", item.category)
-
+        
 def bubble_sort(items):
     n = len(items)
     for c in range(n):
-        for a in range(0, n-i-1):
+        for a in range(0, n-c-1):
             if items[a].price > items[a+1].price:
                 items[a], items[a+1], items[a]
-    return items     
+    return items   
+
+def main():
+    file = "product_data.txt"
+    items = load_item_data(file)
+    
 
 if __name__ == "__main__":
     main()
