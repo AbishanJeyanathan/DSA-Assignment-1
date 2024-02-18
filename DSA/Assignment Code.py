@@ -26,6 +26,19 @@ def bubble_sort(items):
                 items[a], items[a+1], items[a]
     return items   
 
+def find_item_by_id(items, item_id):
+    for item in items:
+        if item['product_id'] == item_id:
+            return item
+    return None
+
+def insert_item(items, item_id, name, price, category):
+    if find_item_by_id(items, item_id) is None:
+        items.append({'product_id': item_id, 'name': name, 'price': price, 'category': category})
+        print(f"Item with ID {item_id} inserted")
+    else:
+        print(f"Item with ID {item_id} already exists.")
+
 def main():
     file = "product_data.txt"
     items = load_item_data(file)
