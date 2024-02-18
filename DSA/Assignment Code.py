@@ -1,3 +1,5 @@
+import time
+
 class Item:
     def __init__(self, item_id, name, price, category):
         self.item_id = item_id
@@ -23,7 +25,7 @@ def bubble_sort(items):
     for c in range(n-1):
         for a in range(0, n-c-1):
             if items[a].price > items[a+1].price:
-                items[a], items[a+1] = items[a+1], items[a]
+                items[a], items[a+1] = items[a+1], items[a]           
     return items     
 
 def insert_item(items, new_item):
@@ -57,7 +59,10 @@ def main():
     print("\nCurrent Item Data:")
     show_items(item_data)
     
+    starttime = time.time()
     sorted_items = bubble_sort(item_data)
+    endtime = time.time()
+    print("Time Taken: ", endtime-starttime)
     print("\nItem Data Sorted By Price:")
     show_items(sorted_items)
 
