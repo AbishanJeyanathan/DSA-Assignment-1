@@ -29,6 +29,15 @@ def bubble_sort(items):
 def main():
     file = "product_data.txt"
     items = load_item_data(file)
+    item_data =  load_item_data('product_data.txt')
+
+    print("\nCurrent Item Data:")
+    show_items(item_data)
+    
+    sorted_items = bubble_sort(item_data)
+    print("\nItem Data Sorted By Price:")
+    show_items(sorted_items)
+    
     
 
 if __name__ == "__main__":
